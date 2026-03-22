@@ -1,11 +1,6 @@
-===================================================================
-        CHAI-UI UTILITY REFERENCE (COMPLETE DOCUMENTATION)
-===================================================================
+== CHAI-UI UTILITY REFERENCE (COMPLETE DOCUMENTATION) ==
 
-
-==============================
-        CORE UTILITIES
-==============================
+++ CORE UTILITIES ++
 
 ----- SPACING (PADDING / MARGIN / SIZE) -----
 
@@ -163,9 +158,7 @@
 
 
 
-=================================
-        VARIANT UTILITIES
-=================================
+== VARIANT UTILITIES ==
 
 Variant utilities are prefixes that control WHEN a utility is applied.
 They must be combined with a base utility.
@@ -217,6 +210,4 @@ variant:utility
 • Handled dynamically by parser (no CSS classes needed)
 
 
-====================================================
-TOTAL: 71 CORE + VARIANT SYSTEM (100+ COMBINATIONS)
-====================================================
+== TOTAL: 71 CORE + VARIANT SYSTEM (100+ COMBINATIONS) ==
