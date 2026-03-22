@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Library</title>
+</head>
+
+<body chai-ui="dark:bg-gray-800 textalign-center ">
+    <button onclick="document.documentElement.classList.toggle('dark')">Toggle Dark</button>
+    <button onclick="addElement()">add element</button>
+    
+    <div chai-ui="negz-1 sticky top-10 text-white font-bold bg-gray-500 p-10">Nav</div>
+    <div chai-ui="scale-0.8 grid-cols-3 m-10 h-[100px] gap-10 bg-gray-700 p-20">
+        <div chai-ui="bg-red-500 flex justify-center text-white items-center font-bold fontsize-xl p-10">1</div>
+        <div chai-ui="bg-blue-500 flex justify-center text-white items-center font-bold fontsize-xl p-10">2</div>
+        <div chai-ui="bg-green-500 flex justify-center text-white items-center font-bold fontsize-xl p-10">3</div>
+    </div>
+    
+    <div chai-ui="hover:sm:bg-green-500 bg-red-300 h-[150px] rotate-180 ml-15 w-150 pt-[20px] border-red-500 cursor-pointer shadow-lg pl-10 font-bold fontsize-xl textalign-left">Box 1</div>
+    <div chai-ui="pl-20 p-15 m-20 opacity-50 text-green-600 bg-yellow-200 mb-25">Box 2</div>
+    <div chai-ui="h-36 w-50 p-15 m-40 bg-gray-300">Box 3</div>
+    <div chai-ui="flex flex-col-reverse p-20 bg-gray-700">
+        <div chai-ui="bg-red-500 p-10">1</div>
+        <div chai-ui="bg-blue-500 p-10">2</div>
+        <div chai-ui="bg-green-500 p-10">3</div>
+        <div chai-ui="bg-pink-500 p-10">4</div>
+        <div chai-ui="bg-yellow-500 p-10">5</div>
+        <div chai-ui="bg-cyan-600 p-10">6</div>
+    </div>
+    <div chai-ui="h-36 w-50 p-15 m-40 bg-pink-100 text-pink-600 border">Default Border</div>
+    <div chai-ui="h-36 w-50 p-15 m-40 bg-gray-700 rounded-lg text-white border-2">Border Width</div>
+    <div chai-ui="h-36 w-50 p-15 m-40 bg-pink-600 text-white rounded-r-md border-red-500">Border Color</div>
+    <div chai-ui="h-36 w-50 p-15 m-40 bg-green-600 text-white border-dashed">Border Style</div>
+    <div chai-ui="h-36 w-50 p-15 m-40 bg-red-900 text-white border-5 border-red-500 border-dashed">Full Border</div>
+    <div chai-ui="grid justify-center content-start h-[120px] bg-gray-700 p-20">
+        <div chai-ui="bg-red-500 text-white p-10 self-start">Top</div>
+        <div chai-ui="bg-blue-500 text-white p-10">Center</div>
+        <div chai-ui="bg-green-500 text-white p-10">Bottom</div>
+    </div> 
+    <script>
+    function addElement() {
+        const div = document.createElement("div");
+        div.setAttribute("chai-ui", "bg-red-300 h-[50px] ml-15 w-150 pt-[20px] border-red-500 cursor-pointer pl-10 font-bold fontsize-xl textalign-center");
+        div.textContent = "New Element";
+
+        const parent = document.body;
+
+        // 3rd position → index 2
+        const thirdChild = parent.children[2];
+
+        if (thirdChild) {
+        parent.insertBefore(div, thirdChild);
+        } else {
+        parent.appendChild(div); // fallback
+        }
+    }
+    </script>
+    <script type="module" src="./ui-lib/index.js"></script>
+</body>
+</html>  
+
+
